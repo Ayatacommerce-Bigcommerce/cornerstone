@@ -1,0 +1,2463 @@
+{
+  "context": {
+    "categoryProductsPerPage": 12,
+    "zoomSize": "1280x1280",
+    "productSize": "500x659",
+    "genericError": "Oops! Something went wrong.",
+    "urls": {
+      "account": {
+        "add_address": "/account.php?action=add_shipping_address",
+        "addresses": "/account.php?action=address_book",
+        "details": "/account.php?action=account_details",
+        "inbox": "/account.php?action=inbox",
+        "index": "/account.php",
+        "orders": {
+          "all": "/account.php?action=order_status",
+          "completed": "/account.php?action=view_orders",
+          "save_new_return": "/account.php?action=save_new_return"
+        },
+        "recent_items": "/account.php?action=recent_items",
+        "returns": "/account.php?action=view_returns",
+        "send_message": "/account.php?action=send_message",
+        "update_action": "/account.php?action=update_account",
+        "wishlists": {
+          "add": "/wishlist.php?action=addwishlist",
+          "all": "/wishlist.php",
+          "delete": "/wishlist.php?action=deletewishlist",
+          "edit": "/wishlist.php?action=editwishlist"
+        }
+      },
+      "auth": {
+        "check_login": "/login.php?action=check_login",
+        "create_account": "/login.php?action=create_account",
+        "forgot_password": "/login.php?action=reset_password",
+        "login": "/login.php",
+        "logout": "/login.php?action=logout",
+        "save_new_account": "/login.php?action=save_new_account",
+        "save_new_password": "/login.php?action=save_new_password",
+        "send_password_email": "/login.php?action=send_password_email"
+      },
+      "brands": "/brands/",
+      "cart": "/cart.php",
+      "checkout": {
+        "multiple_address": "/checkout.php?action=multiple",
+        "single_address": "/checkout"
+      },
+      "compare": "/compare",
+      "contact_us_submit": "/pages.php?action=sendContactForm",
+      "gift_certificate": {
+        "balance": "/giftcertificates.php?action=balance",
+        "purchase": "/giftcertificates.php",
+        "redeem": "/giftcertificates.php?action=redeem"
+      },
+      "home": "/",
+      "product": {
+        "post_review": "/postreview.php"
+      },
+      "rss": {
+        "products": []
+      },
+      "search": "/search.php",
+      "sitemap": "/sitemap.php",
+      "subscribe": {
+        "action": "/subscribe.php"
+      }
+    },
+    "secureBaseUrl": "",
+    "cartId": null,
+    "template": "pages/custom/category/react-category",
+    "validationDictionaryJSON": "{\"locale\":\"en\",\"locales\":{\"validation_messages.valid_email\":\"en\",\"validation_messages.password\":\"en\",\"validation_messages.password_match\":\"en\",\"validation_messages.invalid_password\":\"en\",\"validation_messages.field_not_blank\":\"en\",\"validation_messages.certificate_amount\":\"en\",\"validation_messages.certificate_amount_range\":\"en\",\"validation_messages.price_min_evaluation\":\"en\",\"validation_messages.price_max_evaluation\":\"en\",\"validation_messages.price_min_not_entered\":\"en\",\"validation_messages.price_max_not_entered\":\"en\",\"validation_messages.price_invalid_value\":\"en\",\"validation_messages.invalid_gift_certificate\":\"en\"},\"translations\":{\"validation_messages.valid_email\":\"You must enter a valid email.\",\"validation_messages.password\":\"You must enter a password.\",\"validation_messages.password_match\":\"Your passwords do not match.\",\"validation_messages.invalid_password\":\"Passwords must be at least 7 characters and contain both alphabetic and numeric characters.\",\"validation_messages.field_not_blank\":\" field cannot be blank.\",\"validation_messages.certificate_amount\":\"You must enter a gift certificate amount.\",\"validation_messages.certificate_amount_range\":\"You must enter a certificate amount between [MIN] and [MAX]\",\"validation_messages.price_min_evaluation\":\"Min. price must be less than max. price.\",\"validation_messages.price_max_evaluation\":\"Min. price must be less than max. price.\",\"validation_messages.price_min_not_entered\":\"Min. price is required.\",\"validation_messages.price_max_not_entered\":\"Max. price is required.\",\"validation_messages.price_invalid_value\":\"Input must be greater than 0.\",\"validation_messages.invalid_gift_certificate\":\"Please enter your valid certificate code.\"}}",
+    "validationFallbackDictionaryJSON": "{\"locale\":\"en\",\"locales\":{\"validation_fallback_messages.valid_email\":\"en\",\"validation_fallback_messages.password\":\"en\",\"validation_fallback_messages.password_match\":\"en\",\"validation_fallback_messages.invalid_password\":\"en\",\"validation_fallback_messages.field_not_blank\":\"en\",\"validation_fallback_messages.certificate_amount\":\"en\",\"validation_fallback_messages.certificate_amount_range\":\"en\",\"validation_fallback_messages.price_min_evaluation\":\"en\",\"validation_fallback_messages.price_max_evaluation\":\"en\",\"validation_fallback_messages.price_min_not_entered\":\"en\",\"validation_fallback_messages.price_max_not_entered\":\"en\",\"validation_fallback_messages.price_invalid_value\":\"en\",\"validation_fallback_messages.invalid_gift_certificate\":\"en\"},\"translations\":{\"validation_fallback_messages.valid_email\":\"You must enter a valid email.\",\"validation_fallback_messages.password\":\"You must enter a password.\",\"validation_fallback_messages.password_match\":\"Your passwords do not match.\",\"validation_fallback_messages.invalid_password\":\"Passwords must be at least 7 characters and contain both alphabetic and numeric characters.\",\"validation_fallback_messages.field_not_blank\":\" field cannot be blank.\",\"validation_fallback_messages.certificate_amount\":\"You must enter a gift certificate amount.\",\"validation_fallback_messages.certificate_amount_range\":\"You must enter a certificate amount between [MIN] and [MAX]\",\"validation_fallback_messages.price_min_evaluation\":\"Min. price must be less than max. price.\",\"validation_fallback_messages.price_max_evaluation\":\"Min. price must be less than max. price.\",\"validation_fallback_messages.price_min_not_entered\":\"Min. price is required.\",\"validation_fallback_messages.price_max_not_entered\":\"Max. price is required.\",\"validation_fallback_messages.price_invalid_value\":\"Input must be greater than 0.\",\"validation_fallback_messages.invalid_gift_certificate\":\"Please enter your valid certificate code.\"}}",
+    "validationDefaultDictionaryJSON": "{\"locale\":\"en\",\"locales\":{\"validation_default_messages.valid_email\":\"en\",\"validation_default_messages.password\":\"en\",\"validation_default_messages.password_match\":\"en\",\"validation_default_messages.invalid_password\":\"en\",\"validation_default_messages.field_not_blank\":\"en\",\"validation_default_messages.certificate_amount\":\"en\",\"validation_default_messages.certificate_amount_range\":\"en\",\"validation_default_messages.price_min_evaluation\":\"en\",\"validation_default_messages.price_max_evaluation\":\"en\",\"validation_default_messages.price_min_not_entered\":\"en\",\"validation_default_messages.price_max_not_entered\":\"en\",\"validation_default_messages.price_invalid_value\":\"en\",\"validation_default_messages.invalid_gift_certificate\":\"en\"},\"translations\":{\"validation_default_messages.valid_email\":\"You must enter a valid email.\",\"validation_default_messages.password\":\"You must enter a password.\",\"validation_default_messages.password_match\":\"Your passwords do not match.\",\"validation_default_messages.invalid_password\":\"Passwords must be at least 7 characters and contain both alphabetic and numeric characters.\",\"validation_default_messages.field_not_blank\":\"The field cannot be blank.\",\"validation_default_messages.certificate_amount\":\"You must enter a gift certificate amount.\",\"validation_default_messages.certificate_amount_range\":\"You must enter a certificate amount between [MIN] and [MAX]\",\"validation_default_messages.price_min_evaluation\":\"Min. price must be less than max. price.\",\"validation_default_messages.price_max_evaluation\":\"Min. price must be less than max. price.\",\"validation_default_messages.price_min_not_entered\":\"Min. price is required.\",\"validation_default_messages.price_max_not_entered\":\"Max. price is required.\",\"validation_default_messages.price_invalid_value\":\"Input must be greater than 0.\",\"validation_default_messages.invalid_gift_certificate\":\"Please enter your valid certificate code.\"}}",
+    "carouselArrowAndDotAriaLabel": "Go to slide [SLIDE_NUMBER] of [SLIDES_QUANTITY]",
+    "carouselActiveDotAriaLabel": "active",
+    "carouselContentAnnounceMessage": "You are currently on slide [SLIDE_NUMBER] of [SLIDES_QUANTITY]",
+    "category": {
+      "config": [],
+      "description": "",
+      "detail_messages": [],
+      "faceted_search_enabled": true,
+      "facets": [
+        {
+          "display": "multi",
+          "facet": "Size",
+          "facet_id": 1212,
+          "has_more_results": false,
+          "is_product_option": true,
+          "items": [
+            {
+              "count": 4,
+              "id": "Extra Large",
+              "param_name": "Size",
+              "param_value": "Extra Large",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "Extra Large",
+              "true_count": 4,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Size=Extra+Large"
+            },
+            {
+              "count": 3,
+              "id": "Large",
+              "param_name": "Size",
+              "param_value": "Large",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "Large",
+              "true_count": 3,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Size=Large"
+            },
+            {
+              "count": 3,
+              "id": "Medium",
+              "param_name": "Size",
+              "param_value": "Medium",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "Medium",
+              "true_count": 3,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Size=Medium"
+            }
+          ],
+          "items_count": 10,
+          "partial": "multi",
+          "selected": false,
+          "show_more_toggle": false,
+          "show_product_counts": true,
+          "sort_order": "alphabetically",
+          "start_collapsed": false,
+          "title": "Size",
+          "total_items": 3,
+          "type": "term",
+          "visible": true
+        },
+        {
+          "current_selected_items": [],
+          "display": "range",
+          "facet": "price",
+          "facet_id": 1213,
+          "partial": "range",
+          "selected": false,
+          "start_collapsed": false,
+          "title": "Price",
+          "type": "range",
+          "visible": true
+        },
+        {
+          "display": "rating",
+          "facet": "rating",
+          "facet_id": 1214,
+          "has_more_results": true,
+          "is_product_option": false,
+          "items": [
+            {
+              "count": 2,
+              "id": "1",
+              "param_name": "rating",
+              "param_value": "1",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "1",
+              "true_count": 2,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&rating=1"
+            },
+            {
+              "count": 2,
+              "id": "2",
+              "param_name": "rating",
+              "param_value": "2",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "2",
+              "true_count": 2,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&rating=2"
+            },
+            {
+              "count": 2,
+              "id": "3",
+              "param_name": "rating",
+              "param_value": "3",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "3",
+              "true_count": 2,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&rating=3"
+            },
+            {
+              "count": 2,
+              "id": "4",
+              "param_name": "rating",
+              "param_value": "4",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "4",
+              "true_count": 2,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&rating=4"
+            }
+          ],
+          "partial": "rating",
+          "selected": false,
+          "show_product_counts": true,
+          "start_collapsed": true,
+          "title": "Rating",
+          "total_items": 4,
+          "type": "term",
+          "visible": true
+        },
+        {
+          "display": "multi",
+          "facet": "Model",
+          "facet_id": 1222,
+          "has_more_results": false,
+          "is_product_option": true,
+          "items": [
+            {
+              "count": 9,
+              "id": "Spinner (4 wheels)",
+              "param_name": "Model",
+              "param_value": "Spinner (4 wheels)",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "Spinner (4 wheels)",
+              "true_count": 9,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Model=Spinner+%284+wheels%29"
+            },
+            {
+              "count": 1,
+              "id": "Spinner Expandable(4 wheels)",
+              "param_name": "Model",
+              "param_value": "Spinner Expandable(4 wheels)",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "Spinner Expandable(4 wheels)",
+              "true_count": 1,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Model=Spinner+Expandable%284+wheels%29"
+            }
+          ],
+          "items_count": 10,
+          "partial": "multi",
+          "selected": false,
+          "show_more_toggle": false,
+          "show_product_counts": true,
+          "sort_order": "alphabetically",
+          "start_collapsed": false,
+          "title": "Model",
+          "total_items": 2,
+          "type": "term",
+          "visible": true
+        },
+        {
+          "display": "multi",
+          "facet": "Material",
+          "facet_id": 1225,
+          "has_more_results": false,
+          "is_product_option": true,
+          "items": [
+            {
+              "count": 10,
+              "id": "Roxkin™ (Polypropylene)",
+              "param_name": "Material",
+              "param_value": "Roxkin™ (Polypropylene)",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "Roxkin™ (Polypropylene)",
+              "true_count": 10,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Material=Roxkin%E2%84%A2+%28Polypropylene%29"
+            }
+          ],
+          "items_count": 10,
+          "partial": "multi",
+          "selected": false,
+          "show_more_toggle": false,
+          "show_product_counts": true,
+          "sort_order": "alphabetically",
+          "start_collapsed": false,
+          "title": "Material",
+          "total_items": 1,
+          "type": "term",
+          "visible": true
+        },
+        {
+          "display": "multi",
+          "facet": "Wheels",
+          "facet_id": 1232,
+          "has_more_results": false,
+          "is_product_option": true,
+          "items": [
+            {
+              "count": 10,
+              "id": "4 Wheels",
+              "param_name": "Wheels",
+              "param_value": "4 Wheels",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "4 Wheels",
+              "true_count": 10,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Wheels=4+Wheels"
+            }
+          ],
+          "items_count": 10,
+          "partial": "multi",
+          "selected": false,
+          "show_more_toggle": false,
+          "show_product_counts": true,
+          "sort_order": "alphabetically",
+          "start_collapsed": false,
+          "title": "Wheels",
+          "total_items": 1,
+          "type": "term",
+          "visible": true
+        },
+        {
+          "display": "multi",
+          "facet": "Expanded dimensions",
+          "facet_id": 1234,
+          "has_more_results": false,
+          "is_product_option": true,
+          "items": [
+            {
+              "count": 1,
+              "id": "81 x 57 x 32 cm",
+              "param_name": "Expanded dimensions",
+              "param_value": "81 x 57 x 32 cm",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "81 x 57 x 32 cm",
+              "true_count": 1,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Expanded+dimensions=81+x+57+x+32+cm"
+            }
+          ],
+          "items_count": 10,
+          "partial": "multi",
+          "selected": false,
+          "show_more_toggle": false,
+          "show_product_counts": true,
+          "sort_order": "alphabetically",
+          "start_collapsed": false,
+          "title": "Expanded Dimensions",
+          "total_items": 1,
+          "type": "term",
+          "visible": true
+        },
+        {
+          "display": "multi",
+          "facet": "Expandable",
+          "facet_id": 1252,
+          "has_more_results": false,
+          "is_product_option": true,
+          "items": [],
+          "items_count": 10,
+          "partial": "multi",
+          "selected": false,
+          "show_more_toggle": false,
+          "show_product_counts": true,
+          "sort_order": "alphabetically",
+          "start_collapsed": false,
+          "title": "Expandable",
+          "total_items": 0,
+          "type": "term",
+          "visible": true
+        },
+        {
+          "display": "multi",
+          "facet": "Weight",
+          "facet_id": 1262,
+          "has_more_results": false,
+          "is_product_option": true,
+          "items": [],
+          "items_count": 10,
+          "partial": "multi",
+          "selected": false,
+          "show_more_toggle": false,
+          "show_product_counts": true,
+          "sort_order": "alphabetically",
+          "start_collapsed": false,
+          "title": "Weight",
+          "total_items": 0,
+          "type": "term",
+          "visible": true
+        },
+        {
+          "display": "multi",
+          "facet": "Colour_hex - value",
+          "facet_id": 1267,
+          "has_more_results": false,
+          "is_product_option": true,
+          "items": [
+            {
+              "count": 3,
+              "id": "#000000",
+              "param_name": "Colour_hex - value",
+              "param_value": "#000000",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "#000000",
+              "true_count": 3,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Colour_hex+-+value=%23000000"
+            },
+            {
+              "count": 2,
+              "id": "#216477",
+              "param_name": "Colour_hex - value",
+              "param_value": "#216477",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "#216477",
+              "true_count": 2,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Colour_hex+-+value=%23216477"
+            },
+            {
+              "count": 1,
+              "id": "#444940",
+              "param_name": "Colour_hex - value",
+              "param_value": "#444940",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "#444940",
+              "true_count": 1,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Colour_hex+-+value=%23444940"
+            },
+            {
+              "count": 2,
+              "id": "#C0C0C0",
+              "param_name": "Colour_hex - value",
+              "param_value": "#C0C0C0",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "#C0C0C0",
+              "true_count": 2,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Colour_hex+-+value=%23C0C0C0"
+            },
+            {
+              "count": 2,
+              "id": "#D2A10C",
+              "param_name": "Colour_hex - value",
+              "param_value": "#D2A10C",
+              "parent_category_ids": [],
+              "selected": false,
+              "title": "#D2A10C",
+              "true_count": 2,
+              "url": "/cabin-luggage-/?_bc_fsnf=1&Colour_hex+-+value=%23D2A10C"
+            }
+          ],
+          "items_count": 10,
+          "partial": "multi",
+          "selected": false,
+          "show_more_toggle": false,
+          "show_product_counts": true,
+          "sort_order": "alphabetically",
+          "start_collapsed": false,
+          "title": "Colour_hex - Value",
+          "total_items": 5,
+          "type": "term",
+          "visible": true
+        }
+      ],
+      "id": 54,
+      "image": null,
+      "meta": [],
+      "name": "CABIN LUGGAGE",
+      "products": [
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=238",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=238",
+          "availability": "2-3 business days",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1463,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 1464,
+              "name": "Model",
+              "value": "Spinner (4 wheels)"
+            },
+            {
+              "id": 1465,
+              "name": "Colour_hex - value",
+              "value": "#C0C0C0"
+            },
+            {
+              "id": 1466,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1467,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 1468,
+              "name": "Size",
+              "value": "Extra Large"
+            },
+            {
+              "id": 1469,
+              "name": "Volume",
+              "value": "125 L"
+            },
+            {
+              "id": 1472,
+              "name": "Made in Europe",
+              "value": "yes"
+            },
+            {
+              "id": 1473,
+              "name": "Sizes",
+              "value": "81 cm"
+            },
+            {
+              "id": 1625,
+              "name": "Colour",
+              "value": "Silver"
+            },
+            {
+              "id": 2155,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 2156,
+              "name": "Lock",
+              "value": "TSA to allow safe travel to the US"
+            },
+            {
+              "id": 2157,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 2158,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 2159,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 2160,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 2161,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 2162,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 2163,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with divider pad and ribbons"
+            },
+            {
+              "id": 2164,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 2165,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 2166,
+              "name": "Ribbons",
+              "value": "Yes"
+            },
+            {
+              "id": 2167,
+              "name": "Specification",
+              "value": "Warranty,Model,Colour,Material,Size,Volume,Made in Europe"
+            },
+            {
+              "id": 2168,
+              "name": "Exterior",
+              "value": "Material Info,Lock,Zippers, Handles, Wheel Handle, Wheels, Wheels Type, Address Tag"
+            },
+            {
+              "id": 2169,
+              "name": "Interior",
+              "value": "Bottom compartment,Top compartment,Divider Pad,Ribbons"
+            }
+          ],
+          "date_added": "13th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 238,
+          "image": {
+            "alt": "Spinner (4 wheels) 81cm - Silver",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/238/585/140087-1776-prod_col_140087_1776_front-e6dc8934-eda2-495a-a261-ad1800f77a5d_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__60437.1652192189__75479.1652413312.png?c=1"
+          },
+          "images": [
+            {
+              "alt": "Spinner (4 wheels) 81cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/238/585/140087-1776-prod_col_140087_1776_front-e6dc8934-eda2-495a-a261-ad1800f77a5d_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__60437.1652192189__75479.1652413312.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/238/586/126041-1776-126041_1776_proxis_spinner_6925_back-c24f268b-c912-4de6-bb80-abe9008c8712_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__71344.1652259747__96128.1652413312.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/238/587/126041-1776-126041_1776_proxis_spinner_6925_front34-d9d75627-c0c2-4f5c-9408-abe900920862_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https_1__65081.1652259747__04042.1652413312.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/238/588/126041-1776-126041_1776_proxis_spinner_6925_side-1b975ca7-36d8-47fd-ae3a-abe9009786c9_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__26593.1652259747__44605.1652413312.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/238/589/126041-1776-proxis_spinner_interior_3-b1db6d4f-edb7-4816-9c4a-abf300c35f9d_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__01687.1652259747__33522.1652413312.png?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "Spinner (4 wheels) 81cm - Silver",
+          "num_reviews": 1,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R429.00",
+              "value": 429
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 5,
+          "show_cart_action": true,
+          "sku": "126043-1776",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/spinner-4-wheels-61cm-silver/proxis/",
+          "weight": {
+            "formatted": "3.50 KGS",
+            "value": 3.5
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=237",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=237",
+          "availability": "2-3 business days",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1453,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 1454,
+              "name": "Model",
+              "value": "Spinner (4 wheels)"
+            },
+            {
+              "id": 1455,
+              "name": "Colour_hex - value",
+              "value": "#000000"
+            },
+            {
+              "id": 1456,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1457,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 1458,
+              "name": "Size",
+              "value": "Extra Large"
+            },
+            {
+              "id": 1459,
+              "name": "Volume",
+              "value": "125 L"
+            },
+            {
+              "id": 1461,
+              "name": "Made in Europe",
+              "value": "Yes"
+            },
+            {
+              "id": 1462,
+              "name": "Sizes",
+              "value": "81 cm"
+            },
+            {
+              "id": 1626,
+              "name": "Colour",
+              "value": "Black"
+            },
+            {
+              "id": 2128,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 2129,
+              "name": "Lock",
+              "value": "TSA to allow safe travel to the US"
+            },
+            {
+              "id": 2130,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 2131,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 2132,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 2133,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 2134,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 2135,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 2136,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with divider pad and ribbons"
+            },
+            {
+              "id": 2137,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 2138,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 2139,
+              "name": "Ribbons",
+              "value": "Yes"
+            },
+            {
+              "id": 2140,
+              "name": "Specification",
+              "value": "Warranty,Model,Colour,Material,Size,Volume,Made in Europe"
+            },
+            {
+              "id": 2141,
+              "name": "Exterior",
+              "value": "Material Info,Lock,Zippers, Handles, Wheel Handle, Wheels, Wheels Type, Address Tag"
+            },
+            {
+              "id": 2142,
+              "name": "Interior",
+              "value": "Bottom compartment, Top compartment, Divider Pad, Ribbons"
+            }
+          ],
+          "date_added": "13th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 237,
+          "image": {
+            "alt": "Spinner (4 wheels) 81cm -  black",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/237/578/Spinner_86__54548.1652255757__68908.1652413311.jpg?c=1"
+          },
+          "images": [
+            {
+              "alt": "Spinner (4 wheels) 81cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/237/578/Spinner_86__54548.1652255757__68908.1652413311.jpg?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/237/579/spinner86-2__95806.1652257155__09008.1652413311.jpg?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/237/577/spinner86-1__75742.1652259648__93848.1652448086.jpg?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/237/580/Spinner86-3__97570.1652257155__54491.1652448086.jpg?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/237/581/Spinner86-4__14775.1652257155__76293.1652448086.jpg?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "Spinner (4 wheels) 81cm -  black",
+          "num_reviews": 0,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R429.00",
+              "value": 429
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 0,
+          "show_cart_action": true,
+          "sku": "126043-1041",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/spinner-4-wheels-81cm-black/proxis/",
+          "weight": {
+            "formatted": "3.50 KGS",
+            "value": 3.5
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=236",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=236",
+          "availability": "2-3 business days",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1443,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 1444,
+              "name": "Model",
+              "value": "Spinner (4 wheels)"
+            },
+            {
+              "id": 1445,
+              "name": "Colour_hex - value",
+              "value": "#444940"
+            },
+            {
+              "id": 1446,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1447,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 1448,
+              "name": "Size",
+              "value": "Extra Large"
+            },
+            {
+              "id": 1449,
+              "name": "Volume",
+              "value": "125 L"
+            },
+            {
+              "id": 1451,
+              "name": "Made in Europe",
+              "value": "yes"
+            },
+            {
+              "id": 1452,
+              "name": "Sizes",
+              "value": "81 cm"
+            },
+            {
+              "id": 1627,
+              "name": "Colour",
+              "value": "Matt Climbing Ivy"
+            },
+            {
+              "id": 2103,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 2104,
+              "name": "Lock",
+              "value": "TSA to allow safe travel to the US"
+            },
+            {
+              "id": 2105,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 2106,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 2107,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 2108,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 2109,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 2110,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 2111,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with divider pad and ribbons"
+            },
+            {
+              "id": 2112,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 2113,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 2114,
+              "name": "Ribbons",
+              "value": "Yes"
+            },
+            {
+              "id": 2115,
+              "name": "Specification",
+              "value": "Warranty,Model,Colour,Material,Size,Volume,Made in Europe"
+            },
+            {
+              "id": 2116,
+              "name": "Exterior",
+              "value": "Material Info,Lock,Zippers, Handles, Wheel Handle, Wheels, Wheels Type, Address Tag"
+            },
+            {
+              "id": 2117,
+              "name": "Interior",
+              "value": "Bottom compartment, Top compartment, Divider Pad, Ribbons"
+            }
+          ],
+          "date_added": "13th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 236,
+          "image": {
+            "alt": "Spinner (4 wheels) 81cm - Ivy",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/236/591/126043-9781-prod_col_126043_9781_front34-96129e03-8aef-42fb-81e7-ae44008f6926__66982.1652432999.png?c=1"
+          },
+          "images": [
+            {
+              "alt": "Spinner (4 wheels) 81cm - Ivy",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/236/591/126043-9781-prod_col_126043_9781_front34-96129e03-8aef-42fb-81e7-ae44008f6926__66982.1652432999.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm - Ivy",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/236/590/mc5__94058.1652432999.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm - Ivy",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/236/592/mc2__35157.1652432999.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 81cm - Ivy",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/236/593/mc3__63211.1652433000.png?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "Spinner (4 wheels) 81cm - Ivy",
+          "num_reviews": 0,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R429.00",
+              "value": 429
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 0,
+          "show_cart_action": true,
+          "sku": "126043-9781",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/spinner-4-wheels-81cm-Ivy/proxis/",
+          "weight": {
+            "formatted": "3.50 KGS",
+            "value": 3.5
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=234",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=234",
+          "availability": "2-3 business days",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1421,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 1422,
+              "name": "Model",
+              "value": "Spinner (4 wheels)"
+            },
+            {
+              "id": 1423,
+              "name": "Colour_hex - value",
+              "value": "#216477"
+            },
+            {
+              "id": 1424,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1425,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 1426,
+              "name": "Size",
+              "value": "Medium"
+            },
+            {
+              "id": 1427,
+              "name": "Volume",
+              "value": "75 L"
+            },
+            {
+              "id": 1429,
+              "name": "Made in Europe",
+              "value": "yes"
+            },
+            {
+              "id": 1430,
+              "name": "Sizes",
+              "value": "69 cm"
+            },
+            {
+              "id": 1629,
+              "name": "Colour",
+              "value": "Petrol Blue"
+            },
+            {
+              "id": 2045,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 2046,
+              "name": "Lock",
+              "value": "TSA to allow safe travel to the US"
+            },
+            {
+              "id": 2047,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 2048,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 2049,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 2050,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 2051,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 2052,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 2053,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with divider pad and ribbons"
+            },
+            {
+              "id": 2054,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 2055,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 2056,
+              "name": "Ribbons",
+              "value": "Yes"
+            },
+            {
+              "id": 2057,
+              "name": "Specification",
+              "value": "Warranty,Model,Colour,Material,Size,Volume,Made in Europe"
+            },
+            {
+              "id": 2058,
+              "name": "Exterior",
+              "value": "Material Info,Lock,Zippers, Handles, Wheel Handle, Wheels, Wheels Type, Address Tag"
+            },
+            {
+              "id": 2059,
+              "name": "Interior",
+              "value": "Bottom compartment, Top compartment, Divider Pad, Ribbons"
+            }
+          ],
+          "date_added": "13th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 234,
+          "image": {
+            "alt": "Spinner (4 wheels) 69cm -  blue",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/234/562/sp1__60210.1652244242__85976.1652413300.png?c=1"
+          },
+          "images": [
+            {
+              "alt": "Spinner (4 wheels) 69cm -  blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/234/562/sp1__60210.1652244242__85976.1652413300.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm -  blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/234/563/sp2__49607.1652259556__53736.1652413300.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm -  blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/234/564/sp3__93563.1652259555__71502.1652413300.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm -  blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/234/565/sp4__71462.1652259556__26659.1652413300.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm -  blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/234/566/sp5__07779.1652259556__27187.1652413300.png?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "Spinner (4 wheels) 69cm -  blue",
+          "num_reviews": 1,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R389.00",
+              "value": 389
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 4,
+          "show_cart_action": true,
+          "sku": "126041-1686",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/spinner-4-wheels-69cm-blue/proxis/",
+          "weight": {
+            "formatted": "2.70 KGS",
+            "value": 2.7
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=233",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=233",
+          "availability": "2-3 business days",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1411,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 1412,
+              "name": "Model",
+              "value": "Spinner (4 wheels)"
+            },
+            {
+              "id": 1413,
+              "name": "Colour_hex - value",
+              "value": "#000000"
+            },
+            {
+              "id": 1414,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1415,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 1416,
+              "name": "Size",
+              "value": "Medium"
+            },
+            {
+              "id": 1417,
+              "name": "Volume",
+              "value": "75 L"
+            },
+            {
+              "id": 1419,
+              "name": "Made in Europe",
+              "value": "yes"
+            },
+            {
+              "id": 1420,
+              "name": "Sizes",
+              "value": "69 cm"
+            },
+            {
+              "id": 1630,
+              "name": "Colour",
+              "value": "Black"
+            },
+            {
+              "id": 2007,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 2008,
+              "name": "Lock",
+              "value": "TSA to allow safe travel to the US"
+            },
+            {
+              "id": 2009,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 2010,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 2011,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 2012,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 2013,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 2014,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 2015,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with divider pad and ribbons"
+            },
+            {
+              "id": 2016,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 2017,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 2018,
+              "name": "Ribbons",
+              "value": "Yes"
+            },
+            {
+              "id": 2019,
+              "name": "Specification",
+              "value": "Warranty,Model,Colour,Material,Size,Volume,Made in Europe"
+            },
+            {
+              "id": 2020,
+              "name": "Exterior",
+              "value": "Material Info,Lock,Zippers, Handles, Wheel Handle, Wheels, Wheels Type, Address Tag"
+            },
+            {
+              "id": 2021,
+              "name": "Interior",
+              "value": "Bottom compartment, Top compartment, Divider Pad, Ribbons"
+            }
+          ],
+          "date_added": "13th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 233,
+          "image": {
+            "alt": "Spinner (4 wheels) 69cm -  black",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/233/555/Spinner_86__54548.1652255757__86510.1652413299.jpg?c=1"
+          },
+          "images": [
+            {
+              "alt": "Spinner (4 wheels) 69cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/233/555/Spinner_86__54548.1652255757__86510.1652413299.jpg?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/233/554/spinner86-1__75742.1652259648__79494.1652431286.jpg?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/233/556/spinner86-2__95806.1652257155__96409.1652431286.jpg?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/233/557/Spinner86-3__97570.1652257155__33399.1652431286.jpg?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm -  black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/233/558/Spinner86-4__14775.1652257155__66004.1652431286.jpg?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "Spinner (4 wheels) 69cm -  black",
+          "num_reviews": 0,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R389.00",
+              "value": 389
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 0,
+          "show_cart_action": true,
+          "sku": "126041-1041",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/spinner-4-wheels-69cm-black/proxis/",
+          "weight": {
+            "formatted": "2.70 KGS",
+            "value": 2.7
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=232",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=232",
+          "availability": "2-3 business days",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1400,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 1401,
+              "name": "Model",
+              "value": "Spinner (4 wheels)"
+            },
+            {
+              "id": 1402,
+              "name": "Colour_hex - value",
+              "value": "#C0C0C0"
+            },
+            {
+              "id": 1403,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1404,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 1405,
+              "name": "Size",
+              "value": "Medium"
+            },
+            {
+              "id": 1406,
+              "name": "Volume",
+              "value": "75 L"
+            },
+            {
+              "id": 1409,
+              "name": "Made in Europe",
+              "value": "Yes"
+            },
+            {
+              "id": 1410,
+              "name": "Sizes",
+              "value": "69 cm"
+            },
+            {
+              "id": 1631,
+              "name": "Colour",
+              "value": "Silver"
+            },
+            {
+              "id": 1963,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 1964,
+              "name": "Lock",
+              "value": "TSA to allow safe travel to the US"
+            },
+            {
+              "id": 1965,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 1966,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 1967,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 1968,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 1969,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 1970,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 1971,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with divider pad and ribbons"
+            },
+            {
+              "id": 1972,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 1973,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 1974,
+              "name": "Ribbons",
+              "value": "Yes"
+            },
+            {
+              "id": 1975,
+              "name": "Specification",
+              "value": "Warranty, Model, Colour, Material,  Size, Volume, Made in Europe"
+            },
+            {
+              "id": 1976,
+              "name": "Exterior",
+              "value": "Material Info, Lock,Zippers,Handles,Wheel Handle,Wheels,Wheels Type,Address Tag"
+            },
+            {
+              "id": 1977,
+              "name": "Interior",
+              "value": "Bottom compartment, Top compartment, Divider Pad, Ribbons"
+            }
+          ],
+          "date_added": "13th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 232,
+          "image": {
+            "alt": "Spinner (4 wheels) 69cm - Silver",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/232/549/140087-1776-prod_col_140087_1776_front-e6dc8934-eda2-495a-a261-ad1800f77a5d_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__60437.1652192189__97022.1652413298.png?c=1"
+          },
+          "images": [
+            {
+              "alt": "Spinner (4 wheels) 69cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/232/549/140087-1776-prod_col_140087_1776_front-e6dc8934-eda2-495a-a261-ad1800f77a5d_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__60437.1652192189__97022.1652413298.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/232/550/126041-1776-126041_1776_proxis_spinner_6925_back-c24f268b-c912-4de6-bb80-abe9008c8712_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__71344.1652259747__93917.1652413298.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/232/551/126041-1776-126041_1776_proxis_spinner_6925_front34-d9d75627-c0c2-4f5c-9408-abe900920862_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https_1__65081.1652259747__25466.1652413298.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/232/552/126041-1776-126041_1776_proxis_spinner_6925_side-1b975ca7-36d8-47fd-ae3a-abe9009786c9_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__26593.1652259747__66605.1652413298.png?c=1"
+            },
+            {
+              "alt": "Spinner (4 wheels) 69cm - Silver",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/232/553/126041-1776-proxis_spinner_interior_3-b1db6d4f-edb7-4816-9c4a-abf300c35f9d_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__01687.1652259747__44664.1652413298.png?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "Spinner (4 wheels) 69cm - Silver",
+          "num_reviews": 0,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R389.00",
+              "value": 389
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 0,
+          "show_cart_action": true,
+          "sku": "126041-1776",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/spinner-4-wheels-69cm-silver/proxis/",
+          "weight": {
+            "formatted": "2.70 KGS",
+            "value": 2.7
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=247",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=247",
+          "availability": "",
+          "brand": null,
+          "category": [
+            "LUGGAGE",
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE"
+          ],
+          "custom_fields": [
+            {
+              "id": 1685,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 1686,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 1687,
+              "name": "Handles",
+              "value": "Top & side handles"
+            }
+          ],
+          "date_added": "18th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 247,
+          "image": {
+            "alt": "LITE-BOX Spinner (4 wheels) 75cm",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/247/682/79300-1277-prod_col_79300_1277_back-aae1f22d-71a0-43d3-8c40-abea009cf6fd_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__87172.1653454831.png?c=1"
+          },
+          "images": [
+            {
+              "alt": "LITE-BOX Spinner (4 wheels) 75cm",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/247/682/79300-1277-prod_col_79300_1277_back-aae1f22d-71a0-43d3-8c40-abea009cf6fd_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__87172.1653454831.png?c=1"
+            },
+            {
+              "alt": "LITE-BOX Spinner (4 wheels) 75cm",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/247/681/79300-1277-prod_col_79300_1277_side-0fe8c683-1a88-43a4-bae5-abea009d5bc7_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__99298.1653454831.png?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "LITE-BOX Spinner (4 wheels) 75cm",
+          "num_reviews": 0,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R469.00",
+              "value": 469
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 0,
+          "show_cart_action": true,
+          "sku": "79300-1277",
+          "stock_level": null,
+          "summary": "Lite-Box combines the best materials with a contemporary design. Lite-Box is among the lightest and sturdiest in its class. State-of-the-art technology combined with a great deal of attention to detail gives this collection its key look: a large volume...",
+          "url": "/lite-box/",
+          "weight": {
+            "formatted": "2.80 KGS",
+            "value": 2.8
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=240",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=240",
+          "availability": "",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1491,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 1492,
+              "name": "Lock",
+              "value": "TSA to allow safe travel to the US"
+            },
+            {
+              "id": 1493,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 1494,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 1495,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with ribbons"
+            },
+            {
+              "id": 1497,
+              "name": "Model",
+              "value": "Spinner (4 wheels)"
+            },
+            {
+              "id": 1498,
+              "name": "Colour_hex - value",
+              "value": "#D2A10C"
+            },
+            {
+              "id": 1499,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1500,
+              "name": "Size",
+              "value": "Large"
+            },
+            {
+              "id": 1501,
+              "name": "Volume",
+              "value": "98 L"
+            },
+            {
+              "id": 1502,
+              "name": "Sizes",
+              "value": "75 cm"
+            },
+            {
+              "id": 1624,
+              "name": "Colour",
+              "value": "Honey Gold"
+            },
+            {
+              "id": 2148,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 2149,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 2150,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 2152,
+              "name": "Made in Europe",
+              "value": "Yes"
+            },
+            {
+              "id": 2153,
+              "name": "Specification",
+              "value": "Warranty,Model,Colour,Material,Size,Volume,Made in Europe"
+            },
+            {
+              "id": 2154,
+              "name": "Exterior",
+              "value": "Material Info,Lock,Zippers,Handles,Wheel Handle"
+            },
+            {
+              "id": 2187,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 2188,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 2189,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 2190,
+              "name": "Interior",
+              "value": "Bottom compartment,Top compartment,Divider Pad,Ribbons"
+            },
+            {
+              "id": 2191,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 2192,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 2193,
+              "name": "Ribbons",
+              "value": "Yes"
+            }
+          ],
+          "date_added": "16th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 240,
+          "image": {
+            "alt": "PROXIS Spinner (4 wheels) 75cm  Honey Gold",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/240/596/126041-6856-126041_6856_proxis_spinner_6925_front-e36d91c3-e6a9-4161-8f1d-aaab00aa0659_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__82496.1652714077.png?c=1"
+          },
+          "images": [
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/240/596/126041-6856-126041_6856_proxis_spinner_6925_front-e36d91c3-e6a9-4161-8f1d-aaab00aa0659_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__82496.1652714077.png?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/240/595/126041-6856-prod_col_126041_6856_front34-dd207fc2-7a1e-4ffb-b96b-abe900921289_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__12236.1652714078.png?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/240/598/126041-6856-prod_col_126041_6856_side_1-e0e69fbb-3018-42ba-988e-abe90097a130_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__60402.1652714077.png?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/240/599/126041-6856-prod_col_126041_6856_wheel_handle_full-041dc2f1-3800-4da8-a21a-abe90097a8d6_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__22005.1652687302.png?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/240/597/126041-6856-proxis_spinner_interior_4-2a140271-ae61-4958-a0a3-abf300c36591_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__93719.1652687302.png?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "PROXIS Spinner (4 wheels) 75cm  Honey Gold",
+          "num_reviews": 0,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R409.00",
+              "value": 409
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 0,
+          "show_cart_action": true,
+          "sku": "126042-6856",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/proxis-spinner-4-wheels-75cm-honey-gold/proxis/",
+          "weight": {
+            "formatted": "2.90 KGS",
+            "value": 2.9
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=217",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=217",
+          "availability": "",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1255,
+              "name": "USB Port",
+              "value": "Integrated - Easy Connection"
+            },
+            {
+              "id": 1256,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 1257,
+              "name": "Lock",
+              "value": "Combi lock with TSA to allow safe travel to the US"
+            },
+            {
+              "id": 1258,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 1259,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 1260,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with ribbons"
+            },
+            {
+              "id": 1262,
+              "name": "Model",
+              "value": "Spinner (4 wheels)"
+            },
+            {
+              "id": 1263,
+              "name": "Colour_hex - value",
+              "value": "#000000"
+            },
+            {
+              "id": 1264,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1265,
+              "name": "Size",
+              "value": "Large"
+            },
+            {
+              "id": 1266,
+              "name": "Volume",
+              "value": "98 L"
+            },
+            {
+              "id": 1475,
+              "name": "Sizes",
+              "value": "75 cm"
+            },
+            {
+              "id": 1632,
+              "name": "Colour",
+              "value": "Black"
+            },
+            {
+              "id": 1927,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 1928,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 1929,
+              "name": "Made in Europe",
+              "value": "Yes"
+            },
+            {
+              "id": 1930,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 1931,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 1932,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 1933,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 1934,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 1935,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 1936,
+              "name": "Ribbons",
+              "value": "Yes"
+            },
+            {
+              "id": 1937,
+              "name": "Smart features",
+              "value": "USB Port"
+            },
+            {
+              "id": 1938,
+              "name": "Specification",
+              "value": "Warranty, Model, Colour, Material,  Size, Made in Europe"
+            },
+            {
+              "id": 1939,
+              "name": "Exterior",
+              "value": "Material Info, Lock, Zippers,Handles,Wheel Handle,Wheels,Wheels Type,Address Tag"
+            },
+            {
+              "id": 1940,
+              "name": "Interior",
+              "value": "Bottom compartment ,Top compartment, Divider Pad, Ribbons"
+            }
+          ],
+          "date_added": "9th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 217,
+          "image": {
+            "alt": "PROXIS Spinner (4 wheels) 75cm  Black",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/217/530/Spinner_86__67355.1652448141.jpg?c=1"
+          },
+          "images": [
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/217/530/Spinner_86__67355.1652448141.jpg?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/217/524/Spinner86-6__07705.1652448141.jpg?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/217/527/Spinner86-5__37282.1652108294.jpg?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/217/529/Spinner86-4__73027.1652108294.jpg?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Black",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/217/525/Spinner86-3__38418.1652108294.jpg?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "PROXIS Spinner (4 wheels) 75cm  Black",
+          "num_reviews": 0,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R409.00",
+              "value": 409
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 0,
+          "show_cart_action": true,
+          "sku": "126042-1041",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/proxis-spinner-4-wheels-75cm-black/proxis/",
+          "weight": {
+            "formatted": "2.90 KGS",
+            "value": 2.9
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=216",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=216",
+          "availability": "",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1243,
+              "name": "USB Port",
+              "value": "Integrated - Easy Connection"
+            },
+            {
+              "id": 1244,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 1245,
+              "name": "Lock",
+              "value": "Combi lock with TSA to allow safe travel to the US"
+            },
+            {
+              "id": 1246,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 1247,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 1248,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with ribbons"
+            },
+            {
+              "id": 1250,
+              "name": "Model",
+              "value": "Spinner (4 wheels)"
+            },
+            {
+              "id": 1251,
+              "name": "Colour_hex - value",
+              "value": "#216477"
+            },
+            {
+              "id": 1252,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1253,
+              "name": "Size",
+              "value": "Large"
+            },
+            {
+              "id": 1254,
+              "name": "Volume",
+              "value": "98 L"
+            },
+            {
+              "id": 1474,
+              "name": "Sizes",
+              "value": "75 cm"
+            },
+            {
+              "id": 1633,
+              "name": "Colour",
+              "value": "Petrol Blue"
+            },
+            {
+              "id": 1769,
+              "name": "Smart features",
+              "value": "USB Port"
+            },
+            {
+              "id": 1770,
+              "name": "Specification",
+              "value": "Warranty, Model,  Colour, Size, Volume, Material,  Made in Europe"
+            },
+            {
+              "id": 1771,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 1772,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 1773,
+              "name": "Exterior",
+              "value": "Material Info,  Lock , Zippers ,Handles ,Wheel Handle, Wheels, Address Tag Wheels Type,"
+            },
+            {
+              "id": 1774,
+              "name": "Interior",
+              "value": "Bottom Compartment,  Top compartment , Divider Pad,  Ribbons"
+            },
+            {
+              "id": 1791,
+              "name": "Made in Europe",
+              "value": "Yes"
+            },
+            {
+              "id": 1792,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 1793,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 1794,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 1795,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 1796,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 1797,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 1798,
+              "name": "Ribbons",
+              "value": "Yes"
+            }
+          ],
+          "date_added": "9th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 216,
+          "image": {
+            "alt": "PROXIS Spinner (4 wheels) 75cm  Blue",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/216/523/sp1__88231.1652108124.png?c=1"
+          },
+          "images": [
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/216/523/sp1__88231.1652108124.png?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/216/519/sp2__93904.1652108123.png?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/216/520/sp3__89048.1652108123.png?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/216/521/sp4__60769.1652108123.png?c=1"
+            },
+            {
+              "alt": "PROXIS Spinner (4 wheels) 75cm  Blue",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/216/522/sp5__56255.1652108124.png?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "PROXIS Spinner (4 wheels) 75cm  Blue",
+          "num_reviews": 0,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R409.00",
+              "value": 409
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 0,
+          "show_cart_action": true,
+          "sku": "126042-1686",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/proxis-spinner-4-wheels-75cm-blue/proxis/",
+          "weight": {
+            "formatted": "2.90 KGS",
+            "value": 2.9
+          }
+        },
+        {
+          "add_to_cart_url": "/cart.php?action=add&product_id=235",
+          "add_to_wishlist_url": "/wishlist.php?action=add&product_id=235",
+          "availability": "",
+          "brand": null,
+          "category": [
+            "LUGGAGE/CATEGORIES/CABIN LUGGAGE",
+            "PROXIS"
+          ],
+          "custom_fields": [
+            {
+              "id": 1431,
+              "name": "Warranty",
+              "value": "Limited 10 year global warranty"
+            },
+            {
+              "id": 1432,
+              "name": "Model",
+              "value": "Spinner Expandable(4 wheels)"
+            },
+            {
+              "id": 1433,
+              "name": "Colour_hex - value",
+              "value": "#D2A10C"
+            },
+            {
+              "id": 1434,
+              "name": "Material",
+              "value": "Roxkin™ (Polypropylene)"
+            },
+            {
+              "id": 1435,
+              "name": "Dimensions",
+              "value": "cm"
+            },
+            {
+              "id": 1436,
+              "name": "Expanded dimensions",
+              "value": "81 x 57 x 32 cm"
+            },
+            {
+              "id": 1437,
+              "name": "Size",
+              "value": "Extra Large"
+            },
+            {
+              "id": 1438,
+              "name": "Volume",
+              "value": "125L"
+            },
+            {
+              "id": 1441,
+              "name": "Made in Europe",
+              "value": "Yes"
+            },
+            {
+              "id": 1442,
+              "name": "Sizes",
+              "value": "81 cm"
+            },
+            {
+              "id": 1628,
+              "name": "Colour",
+              "value": "Honey Gold"
+            },
+            {
+              "id": 2081,
+              "name": "Material Info",
+              "value": "Hardside"
+            },
+            {
+              "id": 2082,
+              "name": "Lock",
+              "value": "TSA to allow safe travel to the US"
+            },
+            {
+              "id": 2083,
+              "name": "Zippers",
+              "value": "Yes"
+            },
+            {
+              "id": 2084,
+              "name": "Handles",
+              "value": "Top, side & bottom handles"
+            },
+            {
+              "id": 2085,
+              "name": "Wheel Handle",
+              "value": "Double tube"
+            },
+            {
+              "id": 2086,
+              "name": "Wheels",
+              "value": "4 Wheels"
+            },
+            {
+              "id": 2087,
+              "name": "Wheels Type",
+              "value": "Smooth-rolling wheels for enhanced mobility"
+            },
+            {
+              "id": 2088,
+              "name": "Address Tag",
+              "value": "Retractable, integrated ID tag"
+            },
+            {
+              "id": 2089,
+              "name": "Bottom compartment",
+              "value": "Bottom compartment with divider pad and ribbons"
+            },
+            {
+              "id": 2090,
+              "name": "Top compartment",
+              "value": "Top compartment with divider pad"
+            },
+            {
+              "id": 2091,
+              "name": "Divider Pad",
+              "value": "In the top & the bottom compartment, with pocket"
+            },
+            {
+              "id": 2092,
+              "name": "Ribbons",
+              "value": "Yes"
+            },
+            {
+              "id": 2093,
+              "name": "Specification",
+              "value": "Warranty,Model,Colour,Material,Expanded dimensions,Size,Volume,Made in Europe"
+            },
+            {
+              "id": 2094,
+              "name": "Exterior",
+              "value": "Material Info,Lock,Zippers, Handles, Wheel Handle, Wheels, Wheels Type, Address Tag"
+            },
+            {
+              "id": 2095,
+              "name": "Interior",
+              "value": "Bottom compartment, Top compartment, Divider Pad, Ribbons"
+            }
+          ],
+          "date_added": "13th May 2022",
+          "demo": false,
+          "has_options": false,
+          "id": 235,
+          "image": {
+            "alt": "Spinner Expandable (4 wheels)  81 cm Honey Gold",
+            "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/235/567/126041-6856-126041_6856_proxis_spinner_6925_front-e36d91c3-e6a9-4161-8f1d-aaab00aa0659_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__22711.1652245741__56774.1652413308.png?c=1"
+          },
+          "images": [
+            {
+              "alt": "Spinner Expandable (4 wheels)  81 cm Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/235/567/126041-6856-126041_6856_proxis_spinner_6925_front-e36d91c3-e6a9-4161-8f1d-aaab00aa0659_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__22711.1652245741__56774.1652413308.png?c=1"
+            },
+            {
+              "alt": "Spinner Expandable (4 wheels)  81 cm Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/235/568/126041-6856-prod_col_126041_6856_front34-dd207fc2-7a1e-4ffb-b96b-abe900921289_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__59263.1652259481__08173.1652413308.png?c=1"
+            },
+            {
+              "alt": "Spinner Expandable (4 wheels)  81 cm Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/235/569/126041-6856-prod_col_126041_6856_side_1-e0e69fbb-3018-42ba-988e-abe90097a130_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__22460.1652259482__53099.1652413308.png?c=1"
+            },
+            {
+              "alt": "Spinner Expandable (4 wheels)  81 cm Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/235/570/126041-6856-proxis_spinner_interior_4-2a140271-ae61-4958-a0a3-abf300c36591_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__54086.1652259482__27393.1652413308.png?c=1"
+            },
+            {
+              "alt": "Spinner Expandable (4 wheels)  81 cm Honey Gold",
+              "data": "https://cdn11.bigcommerce.com/s-h3r6pobznr/images/stencil/{:size}/products/235/571/126041-6856-prod_col_126041_6856_side_1-e0e69fbb-3018-42ba-988e-abe90097a130_sv_2017-11-09_sr_c_si_upload-c3b23c2837_sig_cK4dfCowuwmRVcVx4nUbPS9_Kkxq3wGaVPwmuO_1t0Q__spr_https__22460.1652259482__23388.1652413308.png?c=1"
+            }
+          ],
+          "low_stock_level": null,
+          "name": "Spinner Expandable (4 wheels)  81 cm Honey Gold",
+          "num_reviews": 0,
+          "pre_order": false,
+          "price": {
+            "tax_label": "VAT",
+            "with_tax": {
+              "currency": "ZAR",
+              "formatted": "R429.00",
+              "value": 429
+            }
+          },
+          "qty_in_cart": 0,
+          "rating": 0,
+          "show_cart_action": true,
+          "sku": "126043-6856",
+          "stock_level": null,
+          "summary": "Unlock a new era of high performance travelling with Proxis. The outer shells are made from Roxkin&trade;, an exclusive multi-layered material developed by Samsonite. It bounces back into shape, offering remarkable strength, resilience and lightness. The...",
+          "url": "/spinner-expandable-4-wheels-honey-gold-81-cm/proxis/",
+          "weight": {
+            "formatted": "3.50 KGS",
+            "value": 3.5
+          }
+        }
+      ],
+      "search_error": false,
+      "selected": {
+        "items": [],
+        "remove_all_url": ""
+      },
+      "show_compare": 1,
+      "state": [],
+      "subcategories": [],
+      "total_products": 11,
+      "url": "/cabin-luggage-/"
+    }
+  }
+}
