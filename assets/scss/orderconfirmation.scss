@@ -20,6 +20,7 @@
 
 
 
+
 /* header css */
 .containercheckout-header {
   display: none;
@@ -35,6 +36,15 @@
 }
 
 /* order summary box syles */
+// coupon code display none
+[data-test="cart-coupon"]{
+  display: none;
+}
+
+.optimizedCheckout-contentPrimary{
+  display: none;
+}
+
 .ordernumber {
   font-family: "Roboto";
   font-weight: 400;
@@ -227,9 +237,13 @@ a:hover {
   color: #000000;
 }
 
+
+
 .optimizedCheckout-contentPrimary[data-test="cart-count-total"] {
   display: none !important;
 }
+
+
 
 [data-test*="order-confirmation-order-status-text"] {
   display: none;
@@ -284,10 +298,7 @@ a:hover {
   color: var(--black);
 }
 
-#enrollmentsection {
-  padding: 45px 55px 75px 55px;
-  display: none;
-}
+
 
 .maincontainer1 {
   width: 100%;
@@ -430,10 +441,12 @@ a:hover {
 }
 
 #checkout-app {
+  // display: none;
   padding: 0px 30px 30px 30px;
 }
 
 #enrollmentsection {
+  display: none;
   padding: 0px !important;
 }
 
@@ -459,7 +472,7 @@ a:hover {
 @media screen and (max-device-width: 640px) {
   // heading
   [data-test="order-confirmation-heading"]{
-    display: block;
+    // display: block;
   }
   [data-test="modal-heading"]{
     width: 53%;
@@ -703,3 +716,4 @@ a:hover {
         margin-bottom: 20px;
       }
 }
+

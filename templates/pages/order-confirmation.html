@@ -34,7 +34,7 @@
         </div>
         <div>
             <a href="{{getVar 'Gotohomepage'}}">
-                <h4>Cancel</h4>
+                <h4 onclick="updateURL()">Cancel</h4>
             </a>
         </div>
     </div>
@@ -141,7 +141,6 @@
 </footer>
 
 
-
 {{json order}}
 
 
@@ -150,17 +149,20 @@
 
 
 
+
 <script>
-    console.log('script 1 is running............');
-    var ele = setInterval(ordercustomisation, 3000)
+    var ele = setInterval(ordercustomisation, 2000)
+
 
     function ordercustomisation() {
         console.log('order customisation function runing........');
+        $('[data-test="order-confirmation-heading"]').text('Thank you for your order!');
         var content = `An email will be sent containing information about your purchase. If you have any questions about your purchase, email us at <span style='color:#A52238;'>{{getVar "supportEmail"}}.</span>`
         var ordersummeryhead = 'Order information'
 
         var orderIdAppend = "<div class='ordernumberlabel'><p class='ordernumber'>Order Number<p><p class='ordernumber'>{{checkout.order.id}}</p></div>"
-        $('[data-test="order-confirmation-heading"]').text('Thank you for your order!');
+
+
 
         $('#supporttext').append(content).show()
 
@@ -175,36 +177,30 @@
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M11.5614 7.37806C11.8916 7.74591 11.8788 8.30973 11.5229 8.66235L6.41346 13.7256C6.04431 14.0915 5.44581 14.0915 5.07666 13.7256C4.70752 13.3598 4.70752 12.7667 5.07666 12.4009L9.51776 8L5.07666 3.59906C4.70752 3.23325 4.70752 2.64016 5.07667 2.27436C5.44581 1.90855 6.04431 1.90855 6.41346 2.27436L11.5229 7.33765C11.5365 7.35104 11.5493 7.36449 11.5614 7.37806Z"
                             fill="#A52238" />
+
         </svg>`);
 
 
 
         $('.productList').before(orderIdAppend)
 
-        // $('.optimizedCheckout-headingPrimary').show()
-
-        // $('.orderConfirmation-section').show()
-
-        // $('.layout-cart').show()
-
-
-
 
         /* When the orderconfirmation content loaded then only show the Enroll_section and Student_section */
         // if ($(".orderConfirmation")[0]) {
-        if ($(".layout-cart")[0]) {
-            console.log($(".orderConfirmation")[0])
+        if ($(".optimizedCheckout-orderSummary")[0]) {
+            console.log($(".optimizedCheckout-orderSummary")[0])
             console.log('class exists.......');
+            $('.optimizedCheckout-contentPrimary').show()
             $('.containercheckout-header').show()
             $('#enrollmentsection').show()
             $('.containercheckout-footer').show()
         } else {
-           console.log('class is not their..');
-           $('.containercheckout-header').show()
-           $('#enrollmentsection').show()
-           $('.containercheckout-footer').show()
+            $('.optimizedCheckout-contentPrimary').show()
+            $('.containercheckout-header').show()
+            $('#enrollmentsection').show()
+            $('.containercheckout-footer').show()
         }
-        clearInterval(ele);        
+        clearInterval(ele);
     }
 
     getOrderDetails()
@@ -223,7 +219,7 @@
         };
 
         $.ajax(settings).done(function (res) {
-            // console.log('storefront details', res)
+            console.log('storefront details', res)
             var productSku = res.lineItems.digitalItems[0].sku;
             // console.log('1.Getting product sku:', productSku);
             getProductDetails(productSku)
@@ -272,7 +268,7 @@
  }
                 
                 `
-            }), 
+            }),
         })
             .then(res => res.json())
             .then(data1 => {
@@ -281,6 +277,7 @@
                 // console.log('custom222', customFields)
                 productMasterName = data1.data.site.product.name;
                 // console.log('productname', productMasterName)
+                
                 $('#masterproductname').append(productMasterName)
 
                 customFields.forEach(res => {
@@ -323,33 +320,27 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <script>
     // ********************************************************************************
     // ************************* mobile section product cart fetch data start ********************************
     // ********************************************************************************
     var width = $(window).width();
     if (width <= 800) {
-        console.log('script 2 is running........');
+        $(document).on("click", "#cart-print-link", function (e) {
+            e.preventDefault()
+            window.print()
+        });
+
         var getmobileproduct = setInterval(function () {
-            console.log('inside setinterval 2....')
             if ($('.optimizedCheckout-orderSummary')[0]) {
-                console.log('class exists for setinterval 2..');
-                console.log("set time");
                 $('.optimizedCheckout-orderSummary').click()
                 $('body').removeClass('has-activeModal')
+                $('[data-test="order-confirmation-heading"]').text('Thank you for your order!');
+
                 $('[data-test="modal-heading"]').text("Order information")
                 var orderIdAppend = "<div class='ordernumberlabel'><p class='ordernumber'>Order Number<p><p class='ordernumber'>{{checkout.order.id}}</p></div>"
                 $('.productList').before(orderIdAppend)
-           
+
 
                 var mobilecart = $('.ReactModalPortal .cart-modal-body').clone()
                 var bodycart = $('.ReactModalPortal .cart-modal-header.optimizedCheckout-orderSummary').clone()
@@ -358,6 +349,8 @@
                 // console.log("mobilecart body", mobilecart.find('.cart-modal-body'))
                 $('.optimizedCheckout-headingPrimary').after(mobilecart)
                 $('.cart-modal-body.optimizedCheckout-orderSummary').prepend(bodycart)
+                $('#cart-print-link').removeAttr("href");
+
                 clearInterval(getmobileproduct);
             }
         }, 1000);
@@ -366,6 +359,16 @@
     // ************************* mobile section product card fetch data end ********************************
     // ********************************************************************************
 </script>
+
+
+
+
+
+
+
+
+
+
 
 
 
