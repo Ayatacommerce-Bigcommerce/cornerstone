@@ -5,6 +5,33 @@
 {{{ stylesheet '/assets/css/orderconfirmation.css' }}}
 {{ getFontsCollection }}
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+    {{ assignVar "startyourlearning" "https://www.umbctraining.com/courses/IT-Fundamentals/" }}
+    {{ assignVar "gotodashboard"   "https://www.pearson.com/pathways/recommended-programs.html" }}
+    {{ assignVar "findmoreprograms" "https://www.pearson.com/pathways/program-profiles.html" }}
+    {{ assignVar "supportEmail"   "enrollments@regis.com" }}
+    {{ assignVar "Gotohomepage" "https://www.pearson.com/" }}
+    {{ assignVar "Collegenamefooter" "Regis College"}}
+    // enrollment dashboard section
+    {{ assignVar "EnrollDashTitle" "Enrollments dashboard"}}
+    {{ assignVar "DashbordDescription" 'Manage all courses you are enrolled on in one place'}}
+    {{ assignVar "Gotodashboardtitle" 'Go to dashboard'}}
+    // online program section
+    {{ assignVar "EnrollProgramTitle" 'Online programs'}}
+    {{ assignVar "ProgramsDescription" 'Search for more programs among 5000+ courses in 25 areas of study'}}
+    {{ assignVar "findmoreprogramstitle" 'Find more programs'}}
+
+    {{ assignVar "dashboardicon" 'fa fa-th-large'}}
+    {{ assignVar "ProgramsSection" 'fa fa-graduation-cap'}}
+
+
+    // icons
+    
+</script>
 
 <!-- jquery cdn -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -21,10 +48,20 @@
 
 {{#partial "page"}}
 
+<style>
+    /* image for manage your enrollment */
+    .dashboardimage{
+        width: 27.1px;
+        height: 22.31px;
+    }
+    .enrollicon{
+        font-size: 20px;
+        color: black;
+    }
+</style>
 
 
-
-<header class="containercheckout-header">
+<!-- <header class="containercheckout-header">
     <div class="containercheckout-head-main">
         <div>
             <a href="{{getVar 'Gotohomepage' }}">
@@ -38,9 +75,11 @@
             </a>
         </div>
     </div>
+</header> -->
+
+<header class="header-bg">
+    <h1>I am header</h1>
 </header>
-
-
 <div id="main-contianer-div">
     <div id="order_confirmation_content">
         {{{ checkout.order_confirmation_content }}}
@@ -81,17 +120,23 @@
                 </div>
                 <div class="subcontainer2">
                     <div class="DashboardSection">
-                        <div class="TitleDescription">
-                            <svg width="27.13" height="22.31" viewBox="0 0 26 26" fill="none">
+                        <div class="TitleDescription"> 
+                            <!-- <svg class="dashboardimage" viewBox="0 0 26 26" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M2 14C0.895431 14 0 14.8954 0 16V24C0 25.1046 0.895431 26 2 26H10C11.1046 26 12 25.1046 12 24V16C12 14.8954 11.1046 14 10 14H2ZM2 2V10H10V2L2 2ZM2 16V24H10V16H2ZM24 2L16 2V10H24V2ZM16 16V24H24V16H16ZM0 2C0 0.895431 0.895431 0 2 0H10C11.1046 0 12 0.895431 12 2V10C12 11.1046 11.1046 12 10 12H2C0.895431 12 0 11.1046 0 10V2ZM16 0C14.8954 0 14 0.895431 14 2V10C14 11.1046 14.8954 12 16 12H24C25.1046 12 26 11.1046 26 10V2C26 0.895431 25.1046 0 24 0H16ZM14 16C14 14.8954 14.8954 14 16 14H24C25.1046 14 26 14.8954 26 16V24C26 25.1046 25.1046 26 24 26H16C14.8954 26 14 25.1046 14 24V16Z"
                                     fill="black" />
-                            </svg>
-                            <h2 class="EnrollDashTitle">Enrollments dashboard</h2>
+                            </svg> --> 
+                            <!-- <span class="material-symbols-outlined dashboardimage">
+                                {{getVar 'dashboardicon'}}
+                            </span> -->
+                            <span class="enrollicon">
+                                <i class="{{getVar 'dashboardicon'}}"></i>
+                            </span>
+                            <h2 class="EnrollDashTitle">{{getVar 'EnrollDashTitle'}}</h2>
                         </div>
-                        <p class="DashbordDescription">Manage all courses you are enrolled on in one place</p>
+                        <p class="DashbordDescription">{{getVar 'DashbordDescription'}}</p>
                         <div class="IconTitle">
-                            <a href="{{getVar 'gotodashboard' }}" class="button-label underlinelink">Go to dashboard</a>
+                            <a href="{{getVar 'gotodashboard' }}" class="button-label underlinelink">{{getVar 'Gotodashboardtitle'}}</a>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -102,17 +147,19 @@
                     </div>
                     <div>
                         <div class="ProgramsSection">
-                            <svg width="27.13" height="22.31" viewBox="0 0 30 23" fill="none">
+                            <!-- <svg width="27.13" height="22.31" viewBox="0 0 30 23" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M28.3028 5.40952L28.3053 5.4105C29.9878 6.07898 29.987 8.46183 28.3028 9.12863L16.7358 13.7083C16.2629 13.8955 15.7363 13.8955 15.2634 13.7083L6.05885 10.064L3.58634 14.5969L4.94869 18.684C5.05034 18.9889 4.9992 19.3241 4.81125 19.5849C4.6233 19.8457 4.32145 20.0002 4.00001 20.0002H1.00001C0.678564 20.0002 0.376716 19.8457 0.188765 19.5849C0.000813856 19.3241 -0.0503253 18.9889 0.051324 18.684L1.55132 14.184C1.57006 14.1278 1.59375 14.0734 1.62211 14.0214L4.18528 9.3222L3.69638 9.12863C2.01136 8.4615 2.01136 6.07665 3.69638 5.40952L15.264 0.829657C15.7368 0.642638 16.2631 0.642719 16.7358 0.829897L28.3028 5.40952ZM9.34278 9.21312L15.206 7.97875C15.7465 7.86498 16.0923 7.33463 15.9786 6.79419C15.8648 6.25375 15.3344 5.90788 14.794 6.02165L5.9726 7.87879L4.43262 7.26908L15.9996 2.68945L27.5666 7.26908L15.9996 11.8487L9.34278 9.21312ZM7.05031 11.9842L9.04469 12.8791L9.00696 18.8515C9.00568 19.0542 9.0618 19.2176 9.14806 19.3369C9.2065 19.4177 9.27876 19.4783 9.35638 19.5173C10.4958 20.0897 12.8094 20.9997 16.0004 20.9997C19.1914 20.9997 21.505 20.0897 22.6444 19.5173C22.7209 19.4789 22.7936 19.4185 22.8527 19.3369C22.9291 19.2313 22.9827 19.0901 22.9923 18.915C22.9934 18.8943 22.9939 18.8731 22.9938 18.8515L22.956 12.8783L24.9504 11.9834L24.9937 18.8389C24.9999 19.8107 24.5222 20.8121 23.5422 21.3045C22.1975 21.98 19.5759 22.9997 16.0004 22.9997C12.4248 22.9997 9.80326 21.98 8.45854 21.3045L8.44439 21.2973C7.94991 21.0451 7.57952 20.6588 7.33866 20.2068C7.11597 19.7889 7.00399 19.3149 7.007 18.8389L7.05031 11.9842Z"
                                     fill="black" />
-                            </svg>
-                            <h2 class="EnrollProgramTitle">Online programs</h2>
+                            </svg> -->
+                            <span class="enrollicon">
+                                <i class="{{getVar 'ProgramsSection'}}" aria-hidden="true"></i>
+                            </span>
+                            <h2 class="EnrollProgramTitle">{{getVar 'EnrollProgramTitle'}}</h2>
                         </div>
-                        <p class="ProgramsDescription">Search for more programs among 5000+ courses in 25 areas of study</p>
+                        <p class="ProgramsDescription">{{getVar 'ProgramsDescription'}}</p>
                         <div class="IconTitle">
-                            <a class="button-label underlinelink" href=" {{getVar 'findmoreprograms'}} ">Find more
-                                programs</a>
+                            <a class="button-label underlinelink" href=" {{getVar 'findmoreprograms'}} ">{{getVar 'findmoreprogramstitle'}}</a>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -135,7 +182,7 @@
                 id="footerlogo" src="{{ checkout.header_image }}" />
         </div>
         <div>
-            <p class="footer-copy">© {{moment "now" "YYYY"}} Regis College. All rights reserved.</p>
+            <p class="footer-copy">© {{moment "now" "YYYY"}} {{getVar 'Collegenamefooter' }} . All rights reserved.</p>
         </div>
     </div>
 </footer>
@@ -147,7 +194,23 @@
 
 
 
-
+<style>
+    .optimizedCheckout-headingPrimary{
+        display: none;
+    }
+    .layout-cart{
+        display: none;
+    }
+    .containercheckout-header{
+        display: none;
+    }
+    #enrollmentsection{
+        display: none;
+    }
+    .containercheckout-footer{
+        display: none;
+    }
+</style>
 
 
 <script>
@@ -157,6 +220,8 @@
     function ordercustomisation() {
         console.log('order customisation function runing........');
         $('[data-test="order-confirmation-heading"]').text('Thank you for your order!');
+        $('.optimizedCheckout-headingPrimary').show()
+
         var content = `An email will be sent containing information about your purchase. If you have any questions about your purchase, email us at <span style='color:#A52238;'>{{getVar "supportEmail"}}.</span>`
         var ordersummeryhead = 'Order information'
 
@@ -191,16 +256,18 @@
         if ($(".optimizedCheckout-orderSummary")[0]) {
             console.log($(".optimizedCheckout-orderSummary")[0])
             console.log('class exists.......');
-            $('.optimizedCheckout-contentPrimary').show()
+            // $('.optimizedCheckout-contentPrimary').show()
             $('.containercheckout-header').show()
             $('#enrollmentsection').show()
             $('.containercheckout-footer').show()
         } else {
-            $('.optimizedCheckout-contentPrimary').show()
+            // $('.optimizedCheckout-contentPrimary').show()
             $('.containercheckout-header').show()
             $('#enrollmentsection').show()
             $('.containercheckout-footer').show()
         }
+        $('.layout-cart').show()
+
         clearInterval(ele);
     }
 
@@ -342,6 +409,7 @@
                 var orderIdAppend = "<div class='ordernumberlabel'><p class='ordernumber'>Order Number<p><p class='ordernumber'>{{checkout.order.id}}</p></div>"
                 $('.productList').before(orderIdAppend)
 
+                $('.optimizedCheckout-headingPrimary').show()
 
                 var mobilecart = $('.ReactModalPortal .cart-modal-body').clone()
                 var bodycart = $('.ReactModalPortal .cart-modal-header.optimizedCheckout-orderSummary').clone()
