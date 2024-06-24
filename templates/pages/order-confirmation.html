@@ -6,22 +6,13 @@
 {{ getFontsCollection }}
 
 
-
-
-
-
-
 <!-- jquery cdn -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-
-
-
-<!--
-    <script type="text/javascript">
+<script type="text/javascript">
     window.language = {{langJson 'optimized_checkout' }};
 </script>
--->
+
 
 
 {{{head.scripts}}}
@@ -48,8 +39,6 @@
         </div>
     </div>
 </header>
-
-
 
 
 <div id="main-contianer-div">
@@ -138,9 +127,7 @@
     </div>
 </div>
 
-
-
-<!-- footer section -->
+<!-- footer section is here😀-->
 <footer class="containercheckout-footer">
     <div class="containercheckout-footer-main">
         <div>
@@ -164,18 +151,19 @@
 
 
 <script>
-    var ele = setInterval(ordercustomisation, 2000)
+    console.log('script 1 is running............');
+    var ele = setInterval(ordercustomisation, 3000)
 
     function ordercustomisation() {
-        var mainhead = "Thank you for your order!"
+        console.log('order customisation function runing........');
         var content = `An email will be sent containing information about your purchase. If you have any questions about your purchase, email us at <span style='color:#A52238;'>{{getVar "supportEmail"}}.</span>`
         var ordersummeryhead = 'Order information'
 
         var orderIdAppend = "<div class='ordernumberlabel'><p class='ordernumber'>Order Number<p><p class='ordernumber'>{{checkout.order.id}}</p></div>"
+        $('[data-test="order-confirmation-heading"]').text('Thank you for your order!');
 
         $('#supporttext').append(content).show()
 
-        $('[data-test="order-confirmation-heading"]').text(mainhead);
 
         $('.optimizedCheckout-headingSecondary').text(ordersummeryhead);
 
@@ -193,27 +181,30 @@
 
         $('.productList').before(orderIdAppend)
 
-        $('.optimizedCheckout-headingPrimary').show()
+        // $('.optimizedCheckout-headingPrimary').show()
 
-        $('.orderConfirmation-section').show()
+        // $('.orderConfirmation-section').show()
 
-        $('.layout-cart').show()
+        // $('.layout-cart').show()
 
 
 
 
         /* When the orderconfirmation content loaded then only show the Enroll_section and Student_section */
-        if ($(".orderConfirmation")[0]) {
-            $('#enrollmentsection').show()
+        // if ($(".orderConfirmation")[0]) {
+        if ($(".layout-cart")[0]) {
+            console.log($(".orderConfirmation")[0])
+            console.log('class exists.......');
             $('.containercheckout-header').show()
+            $('#enrollmentsection').show()
             $('.containercheckout-footer').show()
         } else {
-            console.log('loading..')
+           console.log('class is not their..');
+           $('.containercheckout-header').show()
+           $('#enrollmentsection').show()
+           $('.containercheckout-footer').show()
         }
-
-
-
-        clearInterval(ele);
+        clearInterval(ele);        
     }
 
     getOrderDetails()
@@ -232,9 +223,9 @@
         };
 
         $.ajax(settings).done(function (res) {
-            console.log('storefront details', res)
+            // console.log('storefront details', res)
             var productSku = res.lineItems.digitalItems[0].sku;
-            console.log('1.Getting product sku:', productSku);
+            // console.log('1.Getting product sku:', productSku);
             getProductDetails(productSku)
         });
     }
@@ -281,23 +272,23 @@
  }
                 
                 `
-            }),
+            }), 
         })
             .then(res => res.json())
             .then(data1 => {
-                console.log('data through graphql:', data1)
+                // console.log('data through graphql:', data1)
                 customFields = data1.data.site.product.customFields.edges;
-                console.log('custom222', customFields)
+                // console.log('custom222', customFields)
                 productMasterName = data1.data.site.product.name;
-                console.log('productname', productMasterName)
+                // console.log('productname', productMasterName)
                 $('#masterproductname').append(productMasterName)
 
                 customFields.forEach(res => {
-                    console.log('customFields 1', res)
+                    // console.log('customFields 1', res)
                     var customlabel = res.node.name;
-                    console.log('customlabel is', customlabel)
+                    // console.log('customlabel is', customlabel)
                     var customvalue = res.node.value;
-                    console.log('customvalue is ', customvalue)
+                    // console.log('customvalue is ', customvalue)
 
 
                     if (customlabel == 'Time Commitment') {
@@ -347,15 +338,13 @@
     // ********************************************************************************
     var width = $(window).width();
     if (width <= 800) {
+        console.log('script 2 is running........');
         var getmobileproduct = setInterval(function () {
+            console.log('inside setinterval 2....')
             if ($('.optimizedCheckout-orderSummary')[0]) {
+                console.log('class exists for setinterval 2..');
                 console.log("set time");
                 $('.optimizedCheckout-orderSummary').click()
-                $('#cart-print-link').click(function(e){
-                    e.preventDefault()
-                    console.log('print button clicked')
-                    window.print()
-                })
                 $('body').removeClass('has-activeModal')
                 $('[data-test="modal-heading"]').text("Order information")
                 var orderIdAppend = "<div class='ordernumberlabel'><p class='ordernumber'>Order Number<p><p class='ordernumber'>{{checkout.order.id}}</p></div>"
@@ -365,8 +354,8 @@
                 var mobilecart = $('.ReactModalPortal .cart-modal-body').clone()
                 var bodycart = $('.ReactModalPortal .cart-modal-header.optimizedCheckout-orderSummary').clone()
                 $(mobilecart).removeClass('modal-body cart-modal')
-                console.log("mobilecart", mobilecart)
-                console.log("mobilecart body", mobilecart.find('.cart-modal-body'))
+                // console.log("mobilecart", mobilecart)
+                // console.log("mobilecart body", mobilecart.find('.cart-modal-body'))
                 $('.optimizedCheckout-headingPrimary').after(mobilecart)
                 $('.cart-modal-body.optimizedCheckout-orderSummary').prepend(bodycart)
                 clearInterval(getmobileproduct);

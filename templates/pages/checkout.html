@@ -99,6 +99,7 @@
             var checkoutSteps = mutation.target.childNodes
             var billingSection = checkoutSteps[0]?.childNodes[1]
             var paymentSection = checkoutSteps[0]?.childNodes[2]
+            var paymentSectionClass = checkoutSteps[0]?.childNodes[2]?.classList[2]
             var billingClass = billingSection?.classList[2]
             // console.log("****checkoutSteps****", checkoutSteps[0].childNodes[1])
             // console.log("****billingSection ****", billingSection)
@@ -135,16 +136,23 @@
             // ****************************************************************************
             // *************** Replace the Terms and Condition Section  *******************
             // ****************************************************************************
-            if (paymentSection) {
-                var formField = paymentSection.querySelector('.checkout-terms')
-                var customText = formField?.getElementsByTagName('span')[0];
-                if (customText) {
-                    var termsNodeValue = customText.firstChild.nodeValue.innerHTML = "By completing your purchase you agree to these";
-                    var termsHref = customText.childNodes[1].href;
-                    var finalTag = termsNodeValue + ` <a target="_blank" href=${termsHref}>Terms of Service.</a>`
-                    // $(customText).html('By completing your purchase you agree to these <a target="_blank" href="https://www.pearson.com/en-ca/legal-information/terms-of-use.html">Terms of Service.</a>');
-                    $(customText).html(finalTag);
-                    // $(formField).show()
+            if (paymentSectionClass === "checkout-step--payment") {
+                var paymentArea = paymentSection.childNodes[1]?.childNodes[0].childNodes[0].childNodes[0]
+                var paymentForm = paymentSection.childNodes[1]?.childNodes[0].childNodes[0].childNodes[0].classList[0]
+                if (paymentForm === "checkout-form") {
+                    var formField = paymentArea.childNodes[2]
+                    // console.log("paymentForm", paymentForm)
+                    // console.log("formField***", formField)
+                    var customText = formField?.getElementsByTagName('span')[0];
+                    // console.log("customText***", customText)
+                    if (customText) {
+                        var termsNodeValue = customText.firstChild.nodeValue.innerHTML = "By completing your purchase you agree to these";
+                        var termsHref = customText.childNodes[1].href;
+                        var finalTag = termsNodeValue + ` <a target="_blank" href=${termsHref}>Terms of Service.</a>`
+                        // $(customText).html('By completing your purchase you agree to these <a target="_blank" href="https://www.pearson.com/en-ca/legal-information/terms-of-use.html">Terms of Service.</a>');
+                        $(customText).html(finalTag);
+                        // $(formField).show()
+                    }
                 }
             }
         }
@@ -178,6 +186,11 @@
                 // console.log("couponAttribute , closeButtton", couponAttribute, closeButtton)
                 $(closeButtton).html('<svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="removeCouponBtn" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.67193L8.39688 0.275052C8.76362 -0.091684 9.35821 -0.091684 9.72495 0.275052C10.0917 0.641788 10.0917 1.23638 9.72495 1.60312L6.32807 5L9.72495 8.39688C10.0917 8.76362 10.0917 9.35821 9.72495 9.72495C9.35821 10.0917 8.76362 10.0917 8.39688 9.72495L5 6.32807L1.60312 9.72495C1.23638 10.0917 0.641788 10.0917 0.275052 9.72495C-0.091684 9.35821 -0.091684 8.76362 0.275052 8.39688L3.67193 5L0.275052 1.60312C-0.091684 1.23638 -0.091684 0.641788 0.275052 0.275052C0.641788 -0.091684 1.23638 -0.091684 1.60312 0.275052L5 3.67193Z" fill="#999999"/></svg>');
             }
+            // *************************************************************************
+            // *************** Remove the Currency name and Change Text ****************
+            // *************************************************************************
+            var cartSection = mutation.target.querySelectorAll('[data-test="cart-total"]')[0]?.childNodes[0].childNodes[0].childNodes[0]
+            $(cartSection).html('Total')
         }
     })
     // ********************************************************************************
